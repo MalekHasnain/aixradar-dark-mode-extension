@@ -1,0 +1,13 @@
+/* Dark Mode Toggle - Base styles (injected via content_scripts css) */
+/* Applied at document_start to prevent white flash */
+
+html.dark-mode-toggle-active,
+html.dark-mode-toggle-active body {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+/* Ensure smooth transition */
+html {
+  transition: filter 0.2s ease, background-color 0.2s ease !important;
+}

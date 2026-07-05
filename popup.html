@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Toggle</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="icons/icon48.png" alt="Dark Mode Toggle" class="logo">
+      <h1>Dark Mode Toggle</h1>
+    </header>
+
+    <div class="toggle-section">
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-label" id="toggleLabel">Dark Mode: Off</span>
+    </div>
+
+    <div class="site-settings">
+      <label class="checkbox-row">
+        <input type="checkbox" id="siteSpecific">
+        <span>Remember setting for this site</span>
+      </label>
+    </div>
+
+    <div class="controls">
+      <div class="control-row">
+        <label>Brightness</label>
+        <input type="range" id="brightness" min="50" max="150" value="100">
+        <span id="brightnessValue">100%</span>
+      </div>
+      <div class="control-row">
+        <label>Contrast</label>
+        <input type="range" id="contrast" min="50" max="150" value="100">
+        <span id="contrastValue">100%</span>
+      </div>
+      <div class="control-row">
+        <label>Sepia</label>
+        <input type="range" id="sepia" min="0" max="100" value="0">
+        <span id="sepiaValue">0%</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="applyBtn" class="btn btn-primary">Apply</button>
+      <button id="resetBtn" class="btn btn-secondary">Reset</button>
+    </div>
+
+    <div class="footer">
+      <p>Powered by <a href="https://aixradar.com" target="_blank">AIX Radar</a></p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
