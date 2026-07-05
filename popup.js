@@ -44,8 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Toggle handler — update label AND auto-apply (single listener, no double-fire)
   toggle.addEventListener('change', function() {
     toggleLabel.textContent = `Dark Mode: ${toggle.checked ? 'On' : 'Off'}`;
+    applyBtn.click();
   });
 
   brightness.addEventListener('input', function() {
@@ -117,8 +119,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Auto-apply on toggle change
-  toggle.addEventListener('change', function() {
-    applyBtn.click();
-  });
+
 });
